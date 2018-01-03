@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Хост: 127.0.0.1
--- Время создания: Июл 15 2017 г., 15:43
--- Версия сервера: 10.1.21-MariaDB
--- Версия PHP: 5.6.30
+-- Хост: localhost
+-- Время создания: Янв 03 2018 г., 12:55
+-- Версия сервера: 10.1.28-MariaDB
+-- Версия PHP: 5.6.32
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -39,8 +41,7 @@ INSERT INTO `categories` (`cat_id`, `cat_title`) VALUES
 (1, 'PHP'),
 (2, 'Python'),
 (3, 'CSS'),
-(22, 'Example Category'),
-(23, 'Vlad');
+(22, 'Example Category');
 
 -- --------------------------------------------------------
 
@@ -100,8 +101,7 @@ INSERT INTO `posts` (`post_id`, `post_category_id`, `post_title`, `post_author`,
 (10, 1, 'Bootstrap', 'Dima Carmanov', '2017-06-15', 'image_3.jpg', '                                                                        Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima Dima                                                                         ', 'Bootstrap, Dima', 7, 'published'),
 (11, 1, 'C++', 'ddfdfdfd', '2017-06-15', 'image2.png', '                                                                                dfdf                                                                        ', 'c++', 4, 'published'),
 (12, 1, 'Title', 'dfdfdsfssadf', '2017-06-15', 'image1.jpg', '                                                xzbxcvb                                        ', 'php, title', 4, 'published'),
-(13, 1, 'PHP', 'Author', '2017-06-13', 'image_4.jpg', '                                                        ksfgknfdkngb                                                ', '', 0, 'published'),
-(18, 1, 'sdfg', 'sdvg', '2017-06-15', '', '<p>sdgv</p>', 'sdgv', 0, 'published');
+(13, 1, 'PHP', 'Author', '2017-06-13', 'image_4.jpg', '                                                        ksfgknfdkngb                                                ', '', 0, 'published');
 
 -- --------------------------------------------------------
 
@@ -129,13 +129,7 @@ INSERT INTO `users` (`user_id`, `username`, `user_password`, `user_firstname`, `
 (1, 'rico', '123', 'Rico', 'Suave', 'ricosuave@gmail.com', '', 'admin', ''),
 (3, 'Dima1', '111', 'Dima', 'Carmanov', 'dima@gmail.com', '', 'admin', ''),
 (4, 'valik1', '111', 'Valik', 'G', 'valik@gmail.com', '', 'subscriber', ''),
-(7, 'taniuffa', '111', 'Tanya', 'Jelezoglo', 'taniuffa@gmail.com', '', 'admin', ''),
-(8, 'bomj', '111', 'Bomjik', 'Sashka', 'dgd@sf.dg', '', 'subscriber', '$2y$10$iusesomecrazystrings22'),
-(12, 'poz', '111', '', '', 'sdfg@sdg.dsf', '', 'subscriber', '$2y$10$iusesomecrazystrings22'),
-(13, 'sdfsf', 'sfdg', '', '', 'sfg@g.fgdf', '', 'subscriber', '$2y$10$iusesomecrazystrings22'),
-(14, 'lrgrelgregregegre', 'FDL,BGFDB', '', '', 'gfdg@GFGFGF.FG', '', 'subscriber', '$2y$10$iusesomecrazystrings22'),
-(15, 'lrgrelgregregegre', '$1$hN0.W82.$RSJF.CBeAHbVTVOyAXjS6.', '', '', 'gfdg@GFGFGF.FG', '', 'subscriber', '$2y$10$iusesomecrazystrings22'),
-(16, 'Dimon', '$1$ng4.kv3.$lfmrUiJNNnTudpqpcgdhO0', '', '', 'dimon@dimo.dimon', '', 'subscriber', '$2y$10$iusesomecrazystrings22');
+(16, 'Dimon', '$1$ng4.kv3.$lfmrUiJNNnTudpqpcgdhO0', '', '', 'dimon@dimo.dimon', '', 'admin', '$2y$10$iusesomecrazystrings22');
 
 --
 -- Индексы сохранённых таблиц
@@ -174,21 +168,26 @@ ALTER TABLE `users`
 --
 ALTER TABLE `categories`
   MODIFY `cat_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
 --
 -- AUTO_INCREMENT для таблицы `comments`
 --
 ALTER TABLE `comments`
   MODIFY `comment_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
 --
 -- AUTO_INCREMENT для таблицы `posts`
 --
 ALTER TABLE `posts`
   MODIFY `post_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
   MODIFY `user_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
